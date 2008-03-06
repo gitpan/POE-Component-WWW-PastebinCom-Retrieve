@@ -1,0 +1,17 @@
+Build.PL
+Changes
+MANIFEST
+README
+lib/POE/Component/WWW/PastebinCom/Retrieve.pm
+t/00-load.t
+t/01-method-same-session.t
+t/02-event-same-session.t
+t/03-method-other-session.t
+t/04-event-other-session.t
+t/05-errors.t
+t/kwalitee.t
+t/pod-coverage.t
+t/pod.t
+examples/retrieve.pl
+Makefile.PL
+META.yml
