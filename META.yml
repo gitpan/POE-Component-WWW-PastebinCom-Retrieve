@@ -1,6 +1,6 @@
 ---
 name: POE-Component-WWW-PastebinCom-Retrieve
-version: 0.001
+version: 0.002
 author:
   - 'Zoffix Znet <zoffix@cpan.org>'
 abstract: non-blocking wrapper around WWW::PastebinCom::Retrieve
@@ -19,7 +19,7 @@ build_requires:
 provides:
   POE::Component::WWW::PastebinCom::Retrieve:
     file: lib/POE/Component/WWW/PastebinCom/Retrieve.pm
-    version: 0.001
+    version: 0.002
 generated_by: Module::Build version 0.2808
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.2.html

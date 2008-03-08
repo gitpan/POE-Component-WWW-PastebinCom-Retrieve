@@ -3,7 +3,7 @@ package POE::Component::WWW::PastebinCom::Retrieve;
 use warnings;
 use strict;
 
-our $VERSION = '0.001';
+our $VERSION = '0.002';
 
 
 use Carp;
@@ -288,7 +288,12 @@ POE::Component::WWW::PastebinCom::Retrieve - non-blocking wrapper around WWW::Pa
         $poco->shutdown;
     }
 
-Using even based interface is also possible of course.
+Using event based interface is also possible of course.
+
+=head2 DESCRIPTION
+
+The module is a non-blocking wrapper around L<WWW::PastebinCom::Retrieve>
+which provides interface to retrieve pastes from L<http://pastebin.com>
 
 =head1 CONSTRUCTOR
 
@@ -370,6 +375,7 @@ C<0>.
             id    => 'http://pastebin.com/m73779e58',
             # or just 'm73779e58',
             _blah => 'pooh!',
+            session => 'other',
         }
     );
 
@@ -397,6 +403,7 @@ Takes no arguments. Shuts down the component.
             id    => 'http://pastebin.com/m73779e58',
             # or just 'm73779e58',
             _blah => 'pooh!',
+            session => 'other',
         }
     );
 
@@ -459,6 +466,17 @@ will contain a human parsable description of the error.
 
 The C<id> key will contain whatever you've specified as an C<id> argument
 to C<retrieve()> event/method.
+
+=head3 session
+
+    { session => 'other' }
+
+    { session => $other_session_reference }
+
+    { session => $other_session_ID }
+
+B<Optional>. Takes either an alias, reference or an ID of an alternative
+session to send output to.
 
 =head2 user defined
 
